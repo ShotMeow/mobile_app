@@ -24,6 +24,7 @@ export const ServicesCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
     padding: 30px;
     border-radius: 10px;
