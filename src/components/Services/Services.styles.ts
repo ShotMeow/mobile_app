@@ -9,6 +9,7 @@ export const ServicesInner = styled.div`
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
 
     @media (max-width: 1085px) {
         grid-template-columns: repeat(2, 1fr);
@@ -70,5 +71,8 @@ export const CardButton = styled(SecondaryButton)`
     &:hover {
         background-color: #fff;
         color: #7780f2 !important;
+    }
+    &:active {
+        background-color: #f0f0f0;
     }
 `;
