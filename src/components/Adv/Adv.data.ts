@@ -1,4 +1,4 @@
-import { ITabs } from "./Adv.types";
+import { ITabs } from "../../assets/types/Tabs.types";
 
 export const tabs: ITabs[] = [
     {

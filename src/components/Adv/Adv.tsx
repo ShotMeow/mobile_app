@@ -1,14 +1,15 @@
 import { useState } from "react";
-import { Container, Subtitle } from "../../assets/styles/generalStyles";
-import { tabs } from "./Adv.data";
 import {
-    AdvBlock,
-    AdvElement,
-    AdvElementActive,
-    AdvList,
-    AdvOutput,
-} from "./Adv.styles";
-import { ITabs } from "./Adv.types";
+    Container,
+    Subtitle,
+    TabsElement,
+    TabsElementActive,
+    TabsList,
+    TabsOutput,
+} from "../../assets/styles/generalStyles";
+import { tabs } from "./Adv.data";
+import { AdvBlock } from "./Adv.styles";
+import { ITabs } from "../../assets/types/Tabs.types";
 
 const Adv = () => {
     const [advs, setAdvs] = useState<ITabs[]>(tabs);
@@ -26,22 +27,24 @@ const Adv = () => {
         <AdvBlock>
             <Container>
                 <Subtitle>Преимущества</Subtitle>
-                <AdvList>
+                <TabsList>
                     {advs.map((adv) => (
                         <li key={adv.id}>
                             {adv.isActive ? (
-                                <AdvElementActive>{adv.title}</AdvElementActive>
-                            ) : (
-                                <AdvElement onClick={handleClick(adv.id)}>
+                                <TabsElementActive>
                                     {adv.title}
-                                </AdvElement>
+                                </TabsElementActive>
+                            ) : (
+                                <TabsElement onClick={handleClick(adv.id)}>
+                                    {adv.title}
+                                </TabsElement>
                             )}
                         </li>
                     ))}
-                </AdvList>
-                <AdvOutput>
+                </TabsList>
+                <TabsOutput>
                     {advs.find((adv) => adv.isActive)?.description}
-                </AdvOutput>
+                </TabsOutput>
             </Container>
         </AdvBlock>
     );

@@ -47,3 +47,26 @@ export const LogoText = styled.span`
 export const Subtitle = styled.h2`
     font-size: 32px;
 `;
+
+export const TabsList = styled.ul`
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #d1d1d1;
+    margin-top: 30px;
+`;
+
+export const TabsElement = styled.button`
+    font-size: 14px;
+    padding-bottom: 8px;
+`;
+
+export const TabsElementActive = styled(TabsElement)`
+    color: #7780f2;
+    border-bottom: 2px solid #7780f2;
+    font-weight: 600;
+`;
+
+export const TabsOutput = styled.p`
+    font-size: 16px;
+    margin-top: 20px;
+`;
