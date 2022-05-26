@@ -16,18 +16,6 @@ export const HeaderInner = styled.div`
     }
 `;
 
-export const Logo = styled.a`
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: #7780f2;
-`;
-
-export const LogoText = styled.span`
-    font-size: 20px;
-    font-weight: 700;
-`;
-
 export const Actions = styled.div`
     display: flex;
     align-items: center;

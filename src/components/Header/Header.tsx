@@ -1,10 +1,13 @@
-import { Container, PrimaryButton } from "../../assets/styles/generalStyles";
+import {
+    Container,
+    Logo,
+    LogoText,
+    PrimaryButton,
+} from "../../assets/styles/generalStyles";
 import {
     Actions,
     HeaderBlock,
     HeaderInner,
-    Logo,
-    LogoText,
     PhoneNumber,
 } from "./Header.styles";
 

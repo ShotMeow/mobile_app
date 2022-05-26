@@ -13,6 +13,7 @@ export const PrimaryButton = styled.button`
     color: #fff;
     font-size: 14px;
     padding: 8px 20px;
+    transition: background-color 0.1s ease;
 
     &:hover {
         background-color: #606bec;
@@ -21,4 +22,16 @@ export const PrimaryButton = styled.button`
     &:active {
         background-color: #4551e8;
     }
+`;
+
+export const Logo = styled.a`
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #7780f2;
+`;
+
+export const LogoText = styled.span`
+    font-size: 20px;
+    font-weight: 700;
 `;
