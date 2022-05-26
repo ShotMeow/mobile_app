@@ -24,6 +24,14 @@ export const PrimaryButton = styled.button`
     }
 `;
 
+export const SecondaryButton = styled.button`
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #7780f2;
+    font-size: 14px;
+    color: #7780f2;
+`;
+
 export const Logo = styled.a`
     display: flex;
     align-items: center;
@@ -38,4 +46,4 @@ export const LogoText = styled.span`
 
 export const Subtitle = styled.h2`
     font-size: 32px;
-`
+`;
