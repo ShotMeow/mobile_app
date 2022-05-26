@@ -13,7 +13,7 @@ import {
 
 const Header = () => {
     return (
-        <HeaderBlock>
+        <HeaderBlock id='header'>
             <Container>
                 <HeaderInner>
                     <Logo href='#'>

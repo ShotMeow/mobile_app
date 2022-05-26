@@ -35,3 +35,7 @@ export const LogoText = styled.span`
     font-size: 20px;
     font-weight: 700;
 `;
+
+export const Subtitle = styled.h2`
+    font-size: 32px;
+`

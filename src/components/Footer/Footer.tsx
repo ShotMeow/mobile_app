@@ -107,7 +107,7 @@ const Footer = () => {
                             </svg>
                         </Social>
                     </SocialBlock>
-                    <Arrow>
+                    <Arrow href='#header'>
                         <svg
                             width='16'
                             height='24'

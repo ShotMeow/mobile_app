@@ -19,6 +19,10 @@ export const GlobalStyle = createGlobalStyle`
         src: local('Montserrat'), url('../fonts/Montserrat/Montserrat-Medium.woff2'), url('../fonts/Montserrat/Montserrat-Medium.woff');
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -27,6 +31,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         font-family: 'Montserrat', sans-serif;
+        color: #181818;
     }
 
     a {

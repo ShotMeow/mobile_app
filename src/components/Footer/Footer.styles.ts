@@ -52,7 +52,7 @@ export const Social = styled.a`
     }
 `;
 
-export const Arrow = styled.button`
+export const Arrow = styled.a`
     svg {
         fill: #181818;
         transition: fill 0.1s ease;
