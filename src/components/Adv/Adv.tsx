@@ -23,17 +23,23 @@ const Adv = () => {
     };
 
     return (
-        <AdvBlock initial={{ marginTop: '200px', opacity: 0 }}
-        whileInView={{ marginTop: '0px', opacity: 1 }}
-        viewport={{ once: true }} id="adv">
+        <AdvBlock
+            initial={{ marginTop: "200px", opacity: 0 }}
+            whileInView={{ marginTop: "0px", opacity: 1 }}
+            viewport={{ once: true }}
+            id='adv'
+        >
             <Container>
                 <Subtitle>Преимущества</Subtitle>
                 <TabsList>
                     {advs.map((adv) => (
                         <li key={adv.id}>
-                                <TabsElement isActive={adv.isActive} onClick={handleClick(adv.id)}>
-                                    {adv.title}
-                                </TabsElement>
+                            <TabsElement
+                                isActive={adv.isActive}
+                                onClick={handleClick(adv.id)}
+                            >
+                                {adv.title}
+                            </TabsElement>
                         </li>
                     ))}
                 </TabsList>

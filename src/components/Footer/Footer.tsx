@@ -35,18 +35,24 @@ const Footer = () => {
                                 <ListLink href='#about'>О нас</ListLink>
                             </li>
                             <li>
-                                <ListLink href='#services'>Наши преимущества</ListLink>
+                                <ListLink href='#services'>
+                                    Наши преимущества
+                                </ListLink>
                             </li>
                             <li>
                                 <ListLink href='#adv'>Услуги</ListLink>
                             </li>
                             <li>
-                                <ListLink href='#steps'>Этапы разработки</ListLink>
+                                <ListLink href='#steps'>
+                                    Этапы разработки
+                                </ListLink>
                             </li>
                         </List>
                         <List>
                             <li>
-                                <ListLink href='#calculator'>Калькулятор</ListLink>
+                                <ListLink href='#calculator'>
+                                    Калькулятор
+                                </ListLink>
                             </li>
                             <li>
                                 <ListLink href='#portfolio'>Портфолио</ListLink>

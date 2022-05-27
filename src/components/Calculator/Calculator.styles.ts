@@ -33,26 +33,26 @@ export const FormComponent = styled.div`
 
     @media (max-width: 980px) {
         &:nth-child(4) {
-        grid-column-start: 1;
-        grid-column-end: 1;
-    }
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
 
-    &:nth-child(5) {
-        grid-column-start: 2;
-        grid-column-end: 3;
-    }
+        &:nth-child(5) {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
     }
 
     @media (max-width: 980px) {
         &:nth-child(4) {
-        grid-column-start: 1;
-        grid-column-end: 1;
-    }
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
 
-    &:nth-child(5) {
-        grid-column-start: 1;
-        grid-column-end: 1;
-    }
+        &:nth-child(5) {
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
     }
 `;
 
@@ -74,18 +74,18 @@ export const ResultBlock = styled.p`
     font-size: 24px;
     color: #464646;
     margin: 40px 0px;
-`
+`;
 
 export const Result = styled.span`
     font-weight: 700;
-    color: #7780F2;
-`
+    color: #7780f2;
+`;
 
 export const Time = styled.span`
-font-weight: 700;
-`
+    font-weight: 700;
+`;
 
 export const CalcButton = styled(PrimaryButton)`
     font-size: 18px;
     padding: 10px 30px;
-`
+`;

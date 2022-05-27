@@ -22,17 +22,23 @@ const Steps = () => {
     };
 
     return (
-        <StepsBlock initial={{ marginTop: '200px', opacity: 0 }}
-        whileInView={{ marginTop: '0px', opacity: 1 }}
-        viewport={{ once: true }} id="steps">
+        <StepsBlock
+            initial={{ marginTop: "200px", opacity: 0 }}
+            whileInView={{ marginTop: "0px", opacity: 1 }}
+            viewport={{ once: true }}
+            id='steps'
+        >
             <Container>
                 <Subtitle>Этапы разработки приложений</Subtitle>
                 <StepsList>
                     {steps.map((step) => (
                         <li key={step.id}>
-                                <TabsElement isActive={step.isActive} onClick={handleClick(step.id)}>
-                                    {step.title}
-                                </TabsElement>
+                            <TabsElement
+                                isActive={step.isActive}
+                                onClick={handleClick(step.id)}
+                            >
+                                {step.title}
+                            </TabsElement>
                         </li>
                     ))}
                 </StepsList>

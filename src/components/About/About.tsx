@@ -11,9 +11,12 @@ import phone from "../../assets/images/phone.png";
 
 const About = () => {
     return (
-        <AboutBlock initial={{ marginTop: '200px', opacity: 0 }}
-        whileInView={{ marginTop: '0px', opacity: 1 }}
-        viewport={{ once: true }} id="about">
+        <AboutBlock
+            initial={{ marginTop: "200px", opacity: 0 }}
+            whileInView={{ marginTop: "0px", opacity: 1 }}
+            viewport={{ once: true }}
+            id='about'
+        >
             <Container>
                 <AboutInner>
                     <AboutTextBlock>
