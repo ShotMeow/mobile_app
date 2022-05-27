@@ -3,7 +3,6 @@ import {
     Container,
     Subtitle,
     TabsElement,
-    TabsElementActive,
     TabsOutput,
 } from "../../assets/styles/generalStyles";
 import { ITabs } from "../../assets/types/Tabs.types";
@@ -29,15 +28,9 @@ const Steps = () => {
                 <StepsList>
                     {steps.map((step) => (
                         <li key={step.id}>
-                            {step.isActive ? (
-                                <TabsElementActive>
-                                    {step.title}
-                                </TabsElementActive>
-                            ) : (
-                                <TabsElement onClick={handleClick(step.id)}>
+                                <TabsElement isActive={step.isActive} onClick={handleClick(step.id)}>
                                     {step.title}
                                 </TabsElement>
-                            )}
                         </li>
                     ))}
                 </StepsList>

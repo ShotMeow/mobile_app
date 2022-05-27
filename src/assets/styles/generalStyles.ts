@@ -56,15 +56,12 @@ export const TabsList = styled.ul`
     margin-top: 30px;
 `;
 
-export const TabsElement = styled.button`
+export const TabsElement = styled.button<{isActive: boolean}>`
     font-size: 14px;
     padding-bottom: 8px;
-`;
-
-export const TabsElementActive = styled(TabsElement)`
-    color: #7780f2;
-    border-bottom: 2px solid #7780f2;
-    font-weight: 600;
+    color: ${props => props.isActive && '#7780f2'};
+    border-bottom: ${props => props.isActive && '2px solid #7780f2'};
+    font-weight: ${props => props.isActive && '600'};
 `;
 
 export const TabsOutput = styled.p`

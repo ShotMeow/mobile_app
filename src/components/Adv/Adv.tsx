@@ -3,7 +3,6 @@ import {
     Container,
     Subtitle,
     TabsElement,
-    TabsElementActive,
     TabsList,
     TabsOutput,
 } from "../../assets/styles/generalStyles";
@@ -30,15 +29,9 @@ const Adv = () => {
                 <TabsList>
                     {advs.map((adv) => (
                         <li key={adv.id}>
-                            {adv.isActive ? (
-                                <TabsElementActive>
-                                    {adv.title}
-                                </TabsElementActive>
-                            ) : (
-                                <TabsElement onClick={handleClick(adv.id)}>
+                                <TabsElement isActive={adv.isActive} onClick={handleClick(adv.id)}>
                                     {adv.title}
                                 </TabsElement>
-                            )}
                         </li>
                     ))}
                 </TabsList>
