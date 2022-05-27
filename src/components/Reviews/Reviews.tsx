@@ -8,7 +8,7 @@ import { reviewsData } from "./Reviews.data";
 
 const Reviews = () => {
   return (
-    <ReviewsBlock>
+    <ReviewsBlock id="reviews">
       <Container>
         <Subtitle>Отзывы клиентов</Subtitle>
         <Swiper

@@ -11,7 +11,7 @@ import phone from "../../assets/images/phone.png";
 
 const About = () => {
     return (
-        <AboutBlock>
+        <AboutBlock id="about">
             <Container>
                 <AboutInner>
                     <AboutTextBlock>

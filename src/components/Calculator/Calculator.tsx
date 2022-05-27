@@ -66,7 +66,7 @@ const Calculator = () => {
     
 
     return (
-        <CalculatorBlock>
+        <CalculatorBlock id="calculator">
             <Container>
                 <Subtitle>Калькулятор расчета примерной стоимости работ</Subtitle>
                 <CalculatorInner>

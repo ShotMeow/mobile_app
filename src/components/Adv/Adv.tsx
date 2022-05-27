@@ -24,7 +24,7 @@ const Adv = () => {
     };
 
     return (
-        <AdvBlock>
+        <AdvBlock id="adv">
             <Container>
                 <Subtitle>Преимущества</Subtitle>
                 <TabsList>

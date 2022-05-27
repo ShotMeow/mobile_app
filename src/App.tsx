@@ -5,6 +5,7 @@ import Calculator from "./components/Calculator/Calculator";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Portfolio from "./components/Portfolio/Portfolio";
+import Questions from "./components/Questions/Questions";
 import Reviews from "./components/Reviews/Reviews";
 import Services from "./components/Services/Services";
 import Steps from "./components/Steps/Steps";
@@ -22,6 +23,7 @@ const App = () => {
                 <Calculator />
                 <Portfolio />
                 <Reviews />
+                <Questions />
             </main>
             <Footer />
         </div>

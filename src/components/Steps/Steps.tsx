@@ -23,7 +23,7 @@ const Steps = () => {
     };
 
     return (
-        <StepsBlock>
+        <StepsBlock id="steps">
             <Container>
                 <Subtitle>Этапы разработки приложений</Subtitle>
                 <StepsList>

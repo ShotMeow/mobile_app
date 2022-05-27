@@ -18,7 +18,7 @@ import image_6 from "../../assets/images/services/6.png";
 
 const Services = () => {
     return (
-        <ServicesBlock>
+        <ServicesBlock id="services">
             <Container>
                 <Subtitle>Наши услуги</Subtitle>
                 <ServicesInner>

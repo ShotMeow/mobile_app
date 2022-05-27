@@ -32,30 +32,30 @@ const Footer = () => {
                     <Nav>
                         <List>
                             <li>
-                                <ListLink href='#'>О нас</ListLink>
+                                <ListLink href='#about'>О нас</ListLink>
                             </li>
                             <li>
-                                <ListLink href='#'>Услуги</ListLink>
+                                <ListLink href='#services'>Наши преимущества</ListLink>
                             </li>
                             <li>
-                                <ListLink href='#'>Этапы разработки</ListLink>
+                                <ListLink href='#adv'>Услуги</ListLink>
                             </li>
                             <li>
-                                <ListLink href='#'>Портфолио</ListLink>
+                                <ListLink href='#steps'>Этапы разработки</ListLink>
                             </li>
                         </List>
                         <List>
                             <li>
-                                <ListLink href='#'>Наши преимущества</ListLink>
+                                <ListLink href='#calculator'>Калькулятор</ListLink>
                             </li>
                             <li>
-                                <ListLink href='#'>Отзывы</ListLink>
+                                <ListLink href='#portfolio'>Портфолио</ListLink>
                             </li>
                             <li>
-                                <ListLink href='#'>Калькулятор</ListLink>
+                                <ListLink href='#reviews'>Отзывы</ListLink>
                             </li>
                             <li>
-                                <ListLink href='#'>
+                                <ListLink href='#questions'>
                                     Ответы на часто задаваемые вопросы
                                 </ListLink>
                             </li>

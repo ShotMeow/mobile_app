@@ -10,9 +10,9 @@ import image_6 from "../../assets/images/portfolio/6.jpg";
 
 const Portfolio = () => {
   return (
-    <PortfolioBlock>
+    <PortfolioBlock id="portfolio">
         <Container>
-            <Subtitle>Наши услуги</Subtitle>
+            <Subtitle>Портфолио</Subtitle>
             <PortfolioInner>
             <PortfolioCard>
                         <CardImage src={image_1} />
