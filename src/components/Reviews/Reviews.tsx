@@ -21,7 +21,7 @@ const Reviews = () => {
           }}
           style={{ marginTop: '20px' }}
         >
-          {reviewsData.map(review => <SwiperSlide style={{width: '45%'}}>
+          {reviewsData.map(review => <SwiperSlide key={review.id} style={{width: '45%'}}>
             <Slide>
               <ReviewHeader>
                 <ReviewIcon src={review.image} />

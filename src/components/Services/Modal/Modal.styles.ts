@@ -19,6 +19,10 @@ export const ModalBody = styled.div`
     background-color: #fff;
     border-radius: 10px;
     width: 30%;
+
+    @media (max-width: 1400px) {
+        width: 90%;
+    }
 `
 
 export const ModalSubtitle = styled(Subtitle)`
