@@ -81,7 +81,7 @@ const Calculator = () => {
                         </FormComponent>
                         <FormComponent>
                             <CalcSubtitle>Количество экранов</CalcSubtitle>
-                            <Input></Input>
+                            <Input type="number" placeholder="Введите количество экранов"></Input>
                         </FormComponent>
                         <FormComponent>
                             <CalcSubtitle>

@@ -1,8 +1,17 @@
+import { FC } from "react"
 import { StyledInput } from "./Input.styles"
 
-const Input = () => {
+interface IInput {
+    placeholder?: string
+    type: string
+    pattern ?: string
+    disabled?: boolean
+    value?: string
+}
+
+const Input: FC<IInput> = ({placeholder, type, pattern, disabled, value}) => {
   return (
-    <StyledInput type="number" placeholder="Введите количество экранов" />
+    <StyledInput type={type} placeholder={placeholder} pattern={pattern} value={value} disabled={disabled} />
   )
 }
 
