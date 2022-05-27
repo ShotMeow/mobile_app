@@ -8,6 +8,7 @@ export const PortfolioBlock = styled.section`
 export const PortfolioInner = styled.div`
     margin-top: 20px;
     display: grid;
+    gap: 50px;
     grid-template-columns: repeat(3, 1fr);
 
     @media (max-width: 1085px) {
@@ -25,7 +26,6 @@ export const PortfolioCard = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    padding: 30px;
     border-radius: 10px;
 
     transition: all 0.3s ease;
