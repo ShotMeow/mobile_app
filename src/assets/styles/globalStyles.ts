@@ -4,19 +4,19 @@ export const GlobalStyle = createGlobalStyle`
     @font-face {
         font-family: 'Montserrat';
         font-weight: 700;
-        src: local('Montserrat'), url('../fonts/Montserrat/Montserrat-Bold.woff2'), url('../fonts/Montserrat/Montserrat-Bold.woff');
+        src: local('Montserrat') format('truetype'), url('../fonts/Montserrat/Montserrat-Bold.woff2') format('woff2'), url('../fonts/Montserrat/Montserrat-Bold.woff') format('woff');
     }
 
     @font-face {
         font-family: 'Montserrat';
         font-weight: 600;
-        src: local('Montserrat'), url('../fonts/Montserrat/Montserrat-Semibold.woff2'), url('../fonts/Montserrat/Montserrat-Semibold.woff');
+        src: local('Montserrat') format('truetype'), url('../fonts/Montserrat/Montserrat-Semibold.woff2') format('woff2'), url('../fonts/Montserrat/Montserrat-Semibold.woff') format('woff');
     }
 
     @font-face {
         font-family: 'Montserrat';
         font-weight: 500;
-        src: local('Montserrat'), url('../fonts/Montserrat/Montserrat-Medium.woff2'), url('../fonts/Montserrat/Montserrat-Medium.woff');
+        src: local('Montserrat') format('truetype'), url('../fonts/Montserrat/Montserrat-Medium.woff2') format('woff2'), url('../fonts/Montserrat/Montserrat-Medium.woff') format('woff');
     }
 
     html {
@@ -40,6 +40,10 @@ export const GlobalStyle = createGlobalStyle`
 
     ul {
         list-style: none;
+    }
+
+    input {
+        border: none;
     }
 
     button {

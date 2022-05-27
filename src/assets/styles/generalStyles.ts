@@ -50,6 +50,7 @@ export const Subtitle = styled.h2`
 
 export const TabsList = styled.ul`
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     border-bottom: 1px solid #d1d1d1;
     margin-top: 30px;
