@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { PrimaryButton } from "../../assets/styles/generalStyles";
 
-export const AboutBlock = styled.section`
+export const AboutBlock = styled(motion.section)`
     padding: 50px 0px;
 `;
 

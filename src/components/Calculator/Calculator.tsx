@@ -66,7 +66,9 @@ const Calculator = () => {
     
 
     return (
-        <CalculatorBlock id="calculator">
+        <CalculatorBlock initial={{ marginTop: '200px', opacity: 0 }}
+        whileInView={{ marginTop: '0px', opacity: 1 }}
+        viewport={{ once: true }} id="calculator">
             <Container>
                 <Subtitle>Калькулятор расчета примерной стоимости работ</Subtitle>
                 <CalculatorInner>

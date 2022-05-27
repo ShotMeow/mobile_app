@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const QuestionsBlock = styled.section`
+export const QuestionsBlock = styled(motion.section)`
     padding: 50px 0px;
     margin-bottom: 100px;
 `

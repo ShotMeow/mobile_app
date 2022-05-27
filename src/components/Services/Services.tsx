@@ -20,14 +20,16 @@ const Services = () => {
     }
 
     return (
-        <ServicesBlock id="services">
+        <ServicesBlock initial={{ marginTop: '200px', opacity: 0 }}
+        whileInView={{ marginTop: '0px', opacity: 1 }}
+        viewport={{ once: true }} id="services">
             <Container>
                 <Subtitle>Наши услуги</Subtitle>
                 <ServicesInner>
                     {services.map(service => <Service key={service.id} id={service.id} title={service.title} image={service.image} description={service.description} onClick={showModal}  />)}
                 </ServicesInner>
             </Container>
-            {modal && <Modal current={current} showModal={() => openModal(!modal)} />}
+            {modal && <Modal isShow={modal} current={current} showModal={() => openModal(!modal)} />}
         </ServicesBlock>
     );
 };

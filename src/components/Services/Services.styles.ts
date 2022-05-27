@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { SecondaryButton } from "../../assets/styles/generalStyles";
 
-export const ServicesBlock = styled.section`
+export const ServicesBlock = styled(motion.section)`
     padding: 50px 0px;
 `;
 

@@ -6,13 +6,15 @@ import { Background, ModalBody, ModalForm, ModalHeader, ModalLabel, ModalSubtitl
 import {MdClose} from 'react-icons/md'
 interface IModal {
     current: IService  | undefined
+    isShow: boolean
     showModal: () => void
 }
 
-const Modal: FC<IModal> = ({current, showModal}) => {
+const Modal: FC<IModal> = ({isShow, current, showModal}) => {
     const handleClick = () => {
         showModal()
     }
+
   return (
     <Background onClick={handleClick}>
         <ModalBody onClick={e => e.stopPropagation()}>

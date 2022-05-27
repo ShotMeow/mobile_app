@@ -8,7 +8,9 @@ import { reviewsData } from "./Reviews.data";
 
 const Reviews = () => {
   return (
-    <ReviewsBlock id="reviews">
+    <ReviewsBlock initial={{ marginTop: '200px', opacity: 0 }}
+    whileInView={{ marginTop: '0px', opacity: 1 }}
+    viewport={{ once: true }} id="reviews">
       <Container>
         <Subtitle>Отзывы клиентов</Subtitle>
         <Swiper

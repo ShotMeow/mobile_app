@@ -19,7 +19,9 @@ const Questions = () => {
         setQuestions(data)
     }
     return (
-        <QuestionsBlock id='questions'>
+        <QuestionsBlock initial={{ marginTop: '200px', opacity: 0 }}
+        whileInView={{ marginTop: '0px', opacity: 1 }}
+        viewport={{ once: true }} id='questions'>
             <Container>
                 <Subtitle>Ответы на часто задаваемые вопросы</Subtitle>
                 <QuestionsInner>

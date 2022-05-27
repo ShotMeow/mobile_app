@@ -22,7 +22,9 @@ const Steps = () => {
     };
 
     return (
-        <StepsBlock id="steps">
+        <StepsBlock initial={{ marginTop: '200px', opacity: 0 }}
+        whileInView={{ marginTop: '0px', opacity: 1 }}
+        viewport={{ once: true }} id="steps">
             <Container>
                 <Subtitle>Этапы разработки приложений</Subtitle>
                 <StepsList>
