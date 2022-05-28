@@ -18,8 +18,8 @@ const Services = () => {
 
     return (
         <ServicesBlock
-            initial={{ marginTop: "200px", opacity: 0 }}
-            whileInView={{ marginTop: "0px", opacity: 1 }}
+            initial={{ translateY: "200px", opacity: 0 }}
+            whileInView={{ translateY: "0px", opacity: 1 }}
             viewport={{ once: true }}
             id='services'
         >

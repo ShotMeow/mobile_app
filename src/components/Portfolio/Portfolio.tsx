@@ -19,8 +19,8 @@ import image_6 from "../../assets/images/portfolio/6.jpg";
 const Portfolio = () => {
     return (
         <PortfolioBlock
-            initial={{ marginTop: "200px", opacity: 0 }}
-            whileInView={{ marginTop: "0px", opacity: 1 }}
+            initial={{ translateY: "200px", opacity: 0 }}
+            whileInView={{ translateY: "0px", opacity: 1 }}
             viewport={{ once: true }}
             id='portfolio'
         >

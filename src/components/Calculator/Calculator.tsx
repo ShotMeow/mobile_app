@@ -66,8 +66,8 @@ const Calculator = () => {
 
     return (
         <CalculatorBlock
-            initial={{ marginTop: "200px", opacity: 0 }}
-            whileInView={{ marginTop: "0px", opacity: 1 }}
+            initial={{ translateX: "-200px", opacity: 0 }}
+            whileInView={{ translateX: "0px", opacity: 1 }}
             viewport={{ once: true }}
             id='calculator'
         >

@@ -12,14 +12,15 @@ export const ReviewHeader = styled.header`
 `;
 
 export const ReviewIcon = styled.img`
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 5px;
 `;
 
 export const ReviewInfo = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 5px;
 `;
 
