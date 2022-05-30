@@ -3,18 +3,11 @@ import { ServicesBlock, ServicesInner } from "./Services.styles";
 
 import Service from "./Service/Service";
 import { services } from "./Services.data";
-import { useState } from "react";
-import Modal from "./Modal/Modal";
-import { IService } from "./Services.types";
+import { changeView } from "../../store/reducers/modal.slice";
+import { useAppDispatch } from "../../store/hooks";
 
 const Services = () => {
-    const [modal, openModal] = useState<boolean>(false);
-    const [current, setCurrent] = useState<IService>();
-    const showModal = (id: number) => {
-        const current = services.find((service) => service.id === id);
-        setCurrent(current);
-        openModal(!modal);
-    };
+    const dispatch = useAppDispatch()
 
     return (
         <ServicesBlock
@@ -33,18 +26,11 @@ const Services = () => {
                             title={service.title}
                             image={service.image}
                             description={service.description}
-                            onClick={showModal}
+                            onClick={() => dispatch(changeView(services.find((service_element) => service_element.id === service.id)?.title))}
                         />
                     ))}
                 </ServicesInner>
             </Container>
-            {modal && (
-                <Modal
-                    isShow={modal}
-                    current={current}
-                    showModal={() => openModal(!modal)}
-                />
-            )}
         </ServicesBlock>
     );
 };

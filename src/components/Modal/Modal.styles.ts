@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Subtitle } from "../../../assets/styles/generalStyles";
+import { Subtitle } from "../../assets/styles/generalStyles";
 
 export const Background = styled.div`
     position: fixed;
@@ -18,10 +18,10 @@ export const ModalBody = styled.div`
     padding: 30px;
     background-color: #fff;
     border-radius: 10px;
-    width: 30%;
+    width: 500px;
 
-    @media (max-width: 1400px) {
-        width: 90%;
+    @media (max-width: 550px) {
+        width: 95%;
     }
 `;
 

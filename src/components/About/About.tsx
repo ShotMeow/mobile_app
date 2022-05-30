@@ -8,8 +8,11 @@ import {
     AboutTextBlock,
 } from "./About.styles";
 import phone from "../../assets/images/phone.png";
+import { useAppDispatch } from "../../store/hooks";
+import { changeView } from "../../store/reducers/modal.slice";
 
 const About = () => {
+    const dispatch = useAppDispatch()
     return (
         <AboutBlock
             initial={{ translateY: "200px", opacity: 0 }}
@@ -29,7 +32,7 @@ const About = () => {
                             автоматизации и оптимизации бизнес-процессов с
                             помощью мобильных приложений и веб-сервисов
                         </AboutDescription>
-                        <AboutButton>Заказать проект</AboutButton>
+                        <AboutButton onClick={() => dispatch(changeView(null))}>Заказать проект</AboutButton>
                     </AboutTextBlock>
                     <img src={phone} alt='Картинка телефона' />
                 </AboutInner>

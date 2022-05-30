@@ -68,3 +68,14 @@ export const TabsOutput = styled.p`
     font-size: 16px;
     margin-top: 20px;
 `;
+
+export const StyledInput = styled.input`
+    border-bottom: 1px solid #b4b4b4;
+    padding: 10px 0px;
+    font-size: 16px;
+    width: 100%;
+
+    &::placeholder {
+        color: #b4b4b4;
+    }
+`

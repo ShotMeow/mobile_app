@@ -4,6 +4,8 @@ import {
     LogoText,
     PrimaryButton,
 } from "../../assets/styles/generalStyles";
+import { useAppDispatch } from "../../store/hooks";
+import { changeView } from "../../store/reducers/modal.slice";
 import {
     Actions,
     HeaderBlock,
@@ -12,6 +14,7 @@ import {
 } from "./Header.styles";
 
 const Header = () => {
+    const dispatch = useAppDispatch()
     return (
         <HeaderBlock id='header'>
             <Container>
@@ -35,7 +38,7 @@ const Header = () => {
                         <PhoneNumber href='tel:+79995851165'>
                             +7 (999) 585-11-65
                         </PhoneNumber>
-                        <PrimaryButton>Заказать звонок</PrimaryButton>
+                        <PrimaryButton onClick={() => dispatch(changeView(null))}>Заказать звонок</PrimaryButton>
                     </Actions>
                 </HeaderInner>
             </Container>

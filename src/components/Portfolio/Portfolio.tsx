@@ -15,8 +15,11 @@ import image_3 from "../../assets/images/portfolio/3.jpg";
 import image_4 from "../../assets/images/portfolio/4.jpg";
 import image_5 from "../../assets/images/portfolio/5.jpg";
 import image_6 from "../../assets/images/portfolio/6.jpg";
+import { useAppDispatch } from "../../store/hooks";
+import { changeView } from "../../store/reducers/modal.slice";
 
 const Portfolio = () => {
+    const dispatch = useAppDispatch()
     return (
         <PortfolioBlock
             initial={{ translateY: "200px", opacity: 0 }}
@@ -35,7 +38,7 @@ const Portfolio = () => {
                             выплат: проектирование, дизайн, разработка
                             приложений для iOS и Android
                         </CardDescription>
-                        <CardButton>Перейти</CardButton>
+                        <CardButton onClick={() => dispatch(changeView(null))}>Перейти</CardButton>
                     </PortfolioCard>
                     <PortfolioCard>
                         <CardImage src={image_2} />
@@ -45,7 +48,7 @@ const Portfolio = () => {
                             бокса AIBA: дизайн и программирование версии для
                             десктопа
                         </CardDescription>
-                        <CardButton>Перейти</CardButton>
+                        <CardButton onClick={() => dispatch(changeView(null))}>Перейти</CardButton>
                     </PortfolioCard>
                     <PortfolioCard>
                         <CardImage src={image_3} />
@@ -55,7 +58,7 @@ const Portfolio = () => {
                             ресторанами: веб-приложение, панель администратора,
                             телеграм-бот и печать чеков
                         </CardDescription>
-                        <CardButton>Перейти</CardButton>
+                        <CardButton onClick={() => dispatch(changeView(null))}>Перейти</CardButton>
                     </PortfolioCard>
                     <PortfolioCard>
                         <CardImage src={image_4} />
@@ -65,7 +68,7 @@ const Portfolio = () => {
                             экологии: разработка мобильных приложений на iOS и
                             Android
                         </CardDescription>
-                        <CardButton>Перейти</CardButton>
+                        <CardButton onClick={() => dispatch(changeView(null))}>Перейти</CardButton>
                     </PortfolioCard>
                     <PortfolioCard>
                         <CardImage src={image_5} />
@@ -75,7 +78,7 @@ const Portfolio = () => {
                             личности на основе социальных и профессиональных
                             характеристик ваших контактов.
                         </CardDescription>
-                        <CardButton>Перейти</CardButton>
+                        <CardButton onClick={() => dispatch(changeView(null))}>Перейти</CardButton>
                     </PortfolioCard>
                     <PortfolioCard>
                         <CardImage src={image_6} />
@@ -85,7 +88,7 @@ const Portfolio = () => {
                             эксплуатации автомобиля и их продажи на бирже:
                             приложение для iOS
                         </CardDescription>
-                        <CardButton>Перейти</CardButton>
+                        <CardButton onClick={() => dispatch(changeView(null))}>Перейти</CardButton>
                     </PortfolioCard>
                 </PortfolioInner>
             </Container>

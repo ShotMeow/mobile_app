@@ -1,5 +1,8 @@
-import { useEffect, useState } from "react";
-import { Container, Subtitle } from "../../assets/styles/generalStyles";
+import {  ChangeEvent, useState } from "react";
+import { Container, StyledInput, Subtitle } from "../../assets/styles/generalStyles";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { authCalc, calcResult, extraCalc, platformCalc, animsCalc, screensCalc } from "../../store/reducers/calculator.slice";
+import { changeView } from "../../store/reducers/modal.slice";
 import {
     animsData,
     authData,
@@ -19,7 +22,6 @@ import {
 } from "./Calculator.styles";
 import { ICheckbox } from "./Calculator.types";
 import Checkbox from "./Inputs/Checkbox/Checkbox";
-import Input from "./Inputs/Input/Input";
 import Radio from "./Inputs/Radio/Radio";
 
 const Calculator = () => {
@@ -28,42 +30,54 @@ const Calculator = () => {
     const [anims, setAnims] = useState<ICheckbox[]>(animsData);
     const [extras, setExtras] = useState<ICheckbox[]>(extrasData);
 
-    const [result, setResult] = useState<number>(0);
-    const [days, setDays] = useState<number>(0);
+    const calculatorData = useAppSelector(store => store.calculator)
+    const dispatch = useAppDispatch()
 
     const changePlatforms = (id: number) => {
         const data = [...platforms];
         data.forEach((platform) => {
             if (platform.id === id) platform.isActive = !platform.isActive;
         });
+        dispatch(platformCalc(data.filter(platform => platform.isActive).length));
+        dispatch(calcResult())
         setPlatforms(data);
     };
 
     const changeAuth = (id: number) => {
         const data = [...auth];
-        data.forEach((platform) => {
-            if (platform.id === id) platform.isActive = !platform.isActive;
+        data.forEach((auth) => {
+            if (auth.id === id) auth.isActive = !auth.isActive;
         });
+        dispatch(authCalc(data.filter(auth => auth.isActive).length));
+        dispatch(calcResult())
         setAuth(data);
     };
 
     const changeExtras = (id: number) => {
         const data = [...extras];
-        data.forEach((platform) => {
-            if (platform.id === id) platform.isActive = !platform.isActive;
+        data.forEach((extra) => {
+            if (extra.id === id) extra.isActive = !extra.isActive;
         });
+        dispatch(extraCalc(data.filter(extra => extra.isActive).length));
+        dispatch(calcResult())
         setExtras(data);
     };
 
     const changeAnims = (id: number) => {
         const data = [...anims];
-        data.forEach((platform) => {
-            if (platform.id === id) platform.isActive = true;
-            else platform.isActive = false;
+        data.forEach((anim) => {
+            if (anim.id === id) anim.isActive = true;
+            else anim.isActive = false;
         });
+        dispatch(animsCalc(id === 1 ? 1 : 2));
+        dispatch(calcResult())
         setAnims(data);
     };
 
+    const changeScreens = (count: number) => {
+        dispatch(screensCalc(count));
+        dispatch(calcResult())
+    }
     return (
         <CalculatorBlock
             initial={{ translateX: "-200px", opacity: 0 }}
@@ -107,10 +121,7 @@ const Calculator = () => {
                         </FormComponent>
                         <FormComponent>
                             <CalcSubtitle>Количество экранов</CalcSubtitle>
-                            <Input
-                                type='number'
-                                placeholder='Введите количество экранов'
-                            ></Input>
+                            <StyledInput onChange={(e: ChangeEvent<HTMLInputElement>) => changeScreens(Number(e.target.value))} type='number' placeholder='Введите количество экранов' />
                         </FormComponent>
                         <FormComponent>
                             <CalcSubtitle>
@@ -142,10 +153,10 @@ const Calculator = () => {
                         </FormComponent>
                     </Form>
                     <ResultBlock>
-                        Итого: <Result>{result} ₽</Result>{" "}
-                        <Time>≈ {days} дней</Time>
+                        Итого: <Result>{calculatorData.result} ₽</Result>{" "}
+                        <Time>≈ {calculatorData.days} дней</Time>
                     </ResultBlock>
-                    <CalcButton>Заказать проект</CalcButton>
+                    <CalcButton onClick={() => dispatch(changeView(null))}>Заказать проект</CalcButton>
                 </CalculatorInner>
             </Container>
         </CalculatorBlock>
