@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const QuestionBlock = styled.article`
@@ -16,13 +17,13 @@ export const QuestionTitle = styled.h3`
     font-size: 26px;
 `;
 
-export const QuestionDescription = styled.p`
+export const QuestionDescription = styled(motion.p)`
     color: #454545;
     font-size: 16px;
     margin-top: 20px;
 `;
 
-export const QuestionButton = styled.button<{ isActive: boolean }>`
+export const QuestionButton = styled(motion.button)`
     background-color: #7780f2;
     border-radius: 50%;
     width: 35px;
@@ -30,8 +31,4 @@ export const QuestionButton = styled.button<{ isActive: boolean }>`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    svg {
-        transform: rotate(${(props) => props.isActive && "45"}deg);
-    }
 `;

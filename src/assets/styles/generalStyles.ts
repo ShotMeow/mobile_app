@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -64,7 +65,7 @@ export const TabsElement = styled.button<{isActive: boolean}>`
     font-weight: ${props => props.isActive && '600'};
 `;
 
-export const TabsOutput = styled.p`
+export const TabsOutput = styled(motion.p)`
     font-size: 16px;
     margin-top: 20px;
 `;

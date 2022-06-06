@@ -1,3 +1,4 @@
+import { MaskedInput } from "react-hook-mask";
 import styled from "styled-components";
 import { Subtitle } from "../../assets/styles/generalStyles";
 
@@ -51,3 +52,19 @@ export const ModalForm = styled.form`
     flex-direction: column;
     gap: 20px;
 `;
+
+export const ErrorMessage = styled.span`
+    margin-top: 5px;
+    color: #CB3D35;
+`
+
+export const PhoneInput = styled(MaskedInput)`
+    border-bottom: 1px solid #b4b4b4;
+    padding: 10px 0px;
+    font-size: 16px;
+    width: 100%;
+
+    &::placeholder {
+        color: #b4b4b4;
+    }
+`

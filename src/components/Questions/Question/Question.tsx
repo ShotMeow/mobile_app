@@ -23,16 +23,20 @@ const Question: FC<IQuestionComponent> = ({
     const handleClick = () => {
         onClick(id);
     };
+    const item = {
+        active: {rotate: 45},
+        inactive: {rotate: 0}
+    }
     return (
         <QuestionBlock>
             <QuestionHeader onClick={handleClick}>
                 <QuestionTitle>{title}</QuestionTitle>
-                <QuestionButton isActive={isActive}>
+                <QuestionButton animate={isActive ? 'active' : 'inactive'} variants={item}>
                     <BsPlus size={33} color='white' />
                 </QuestionButton>
             </QuestionHeader>
             {isActive && (
-                <QuestionDescription>{description}</QuestionDescription>
+                <QuestionDescription animate={{x: 10}}>{description}</QuestionDescription>
             )}
         </QuestionBlock>
     );
