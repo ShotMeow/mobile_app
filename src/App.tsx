@@ -30,17 +30,7 @@ const App = () => {
                 <Questions />
             </main>
             <Footer />
-            <AnimatePresence>
-                {isModal && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                    >
-                        <Modal />
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            <AnimatePresence>{isModal && <Modal />}</AnimatePresence>
         </div>
     );
 };

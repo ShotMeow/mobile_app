@@ -3,7 +3,7 @@ import { MaskedInput } from "react-hook-mask";
 import styled from "styled-components";
 import { Subtitle } from "../../assets/styles/generalStyles";
 
-export const Background = styled.div`
+export const Background = styled(motion.div)`
     position: fixed;
     left: 0;
     top: 0;

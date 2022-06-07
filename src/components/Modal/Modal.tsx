@@ -34,7 +34,12 @@ const Modal = () => {
     const maskGenerator = createDefaultMaskGenerator("+7 999 999 99-99");
     const onSubmit = (data: any) => console.log(data);
     return (
-        <Background onClick={() => dispatch(changeView(null))}>
+        <Background
+            onClick={() => dispatch(changeView(null))}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <ModalBody
                 onClick={(e) => e.stopPropagation()}
                 initial={{ scale: 0 }}
