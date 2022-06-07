@@ -24,19 +24,29 @@ const Question: FC<IQuestionComponent> = ({
         onClick(id);
     };
     const item = {
-        active: {rotate: 45},
-        inactive: {rotate: 0}
-    }
+        active: { rotate: 45 },
+        inactive: { rotate: 0 },
+    };
     return (
         <QuestionBlock>
             <QuestionHeader onClick={handleClick}>
                 <QuestionTitle>{title}</QuestionTitle>
-                <QuestionButton animate={isActive ? 'active' : 'inactive'} variants={item}>
+                <QuestionButton
+                    animate={isActive ? "active" : "inactive"}
+                    variants={item}
+                >
                     <BsPlus size={33} color='white' />
                 </QuestionButton>
             </QuestionHeader>
             {isActive && (
-                <QuestionDescription animate={{x: 10}}>{description}</QuestionDescription>
+                <QuestionDescription
+                    initial={{ height: 0 }}
+                    animate={{ height: "auto" }}
+                    exit={{ height: 0 }}
+                    style={{ overflow: "hidden" }}
+                >
+                    {description}
+                </QuestionDescription>
             )}
         </QuestionBlock>
     );

@@ -21,7 +21,6 @@ const Steps = () => {
         setSteps(current);
     };
 
-
     return (
         <StepsBlock
             initial={{ translateX: "-200px", opacity: 0 }}
