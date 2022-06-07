@@ -18,6 +18,7 @@ export const RadioElem = styled.div<{ active: boolean }>`
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.1s ease;
 `;
 
 export const RadioText = styled.span<{ active: boolean }>`

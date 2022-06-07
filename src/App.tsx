@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { GlobalStyle } from "./assets/styles/globalStyles";
 import About from "./components/About/About";
 import Adv from "./components/Adv/Adv";
@@ -13,7 +14,7 @@ import Steps from "./components/Steps/Steps";
 import { useAppSelector } from "./store/hooks";
 
 const App = () => {
-    const isModal = useAppSelector(store => store.modal.isActive)
+    const isModal = useAppSelector((store) => store.modal.isActive);
     return (
         <div>
             <GlobalStyle />
@@ -29,7 +30,17 @@ const App = () => {
                 <Questions />
             </main>
             <Footer />
-            {isModal && <Modal />}
+            <AnimatePresence>
+                {isModal && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                    >
+                        <Modal />
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 };

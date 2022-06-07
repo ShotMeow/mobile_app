@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { CheckboxBlock, CheckboxElem, CheckboxText } from "./Checkbox.styles";
 import { BiCheck } from "react-icons/bi";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface ICheckbox {
     id: number;
@@ -17,11 +17,17 @@ const Checkbox: FC<ICheckbox> = ({ id, active, children, onClick }) => {
     return (
         <CheckboxBlock onClick={handleClick}>
             <CheckboxElem active={active}>
-                {active && (
-                    <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>
-                        <BiCheck color='white' size={20} />
-                    </motion.div>
-                )}
+                <AnimatePresence>
+                    {active && (
+                        <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            exit={{ scale: 0 }}
+                        >
+                            <BiCheck color='white' size={20} />
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </CheckboxElem>
             <CheckboxText active={active}>{children}</CheckboxText>
         </CheckboxBlock>

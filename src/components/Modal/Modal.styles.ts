@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { MaskedInput } from "react-hook-mask";
 import styled from "styled-components";
 import { Subtitle } from "../../assets/styles/generalStyles";
@@ -15,7 +16,7 @@ export const Background = styled.div`
     z-index: 2;
 `;
 
-export const ModalBody = styled.div`
+export const ModalBody = styled(motion.div)`
     padding: 30px;
     background-color: #fff;
     border-radius: 10px;
@@ -55,8 +56,8 @@ export const ModalForm = styled.form`
 
 export const ErrorMessage = styled.span`
     margin-top: 5px;
-    color: #CB3D35;
-`
+    color: #cb3d35;
+`;
 
 export const PhoneInput = styled(MaskedInput)`
     border-bottom: 1px solid #b4b4b4;
@@ -67,4 +68,4 @@ export const PhoneInput = styled(MaskedInput)`
     &::placeholder {
         color: #b4b4b4;
     }
-`
+`;
