@@ -10,9 +10,10 @@ import {
     Slide,
 } from "./Reviews.styles";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {Autoplay} from "swiper";
+import { Autoplay } from "swiper";
 
 import "swiper/css";
+import "swiper/css/pagination";
 
 import { reviewsData } from "./Reviews.data";
 
@@ -34,6 +35,7 @@ const Reviews = () => {
                         disableOnInteraction: false,
                         stopOnLastSlide: true,
                     }}
+                    loop
                     breakpoints={{
                         1000: {
                             slidesPerView: 2,

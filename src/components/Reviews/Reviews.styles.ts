@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { SwiperSlide } from "swiper/react";
 
 export const ReviewsBlock = styled(motion.section)`
     padding: 50px 0px;

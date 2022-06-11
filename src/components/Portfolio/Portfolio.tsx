@@ -1,10 +1,6 @@
 import { Container, Subtitle } from "../../assets/styles/generalStyles";
-import {
-    PortfolioBlock,
-    PortfolioInner,
-} from "./Portfolio.styles";
+import { PortfolioBlock, PortfolioInner } from "./Portfolio.styles";
 
-import { useAppDispatch } from "../../store/hooks";
 import { elements } from "./Portfolio.data";
 import Element from "./Element/Element";
 
@@ -19,7 +15,14 @@ const Portfolio = () => {
             <Container>
                 <Subtitle>Портфолио</Subtitle>
                 <PortfolioInner>
-                    {elements.map(element => <Element key={element.id} image={element.image} title={element.title} description={element.description} />)}
+                    {elements.map((element) => (
+                        <Element
+                            key={element.id}
+                            image={element.image}
+                            title={element.title}
+                            description={element.description}
+                        />
+                    ))}
                 </PortfolioInner>
             </Container>
         </PortfolioBlock>
